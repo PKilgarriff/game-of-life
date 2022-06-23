@@ -13,6 +13,24 @@
   }
 }
 
+table, th, td {
+  border:1px solid black;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+td, tr {
+  text-align: center;
+  vertical-align: center;
+}
+
+td {
+  width: 1em;
+  height: 1em;
+}
+
 .live-cell {
   background-color: #000000;
 }
