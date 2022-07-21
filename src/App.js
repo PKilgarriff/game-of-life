@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cell from "./components/Cell";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Game of Life</h1>
       </header>
+      <div className="grid">
+        <div className="row">
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+        </div>
+        <div className="row">
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+        </div>
+        <div className="row">
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+        </div>
+        <div className="row">
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+        </div>
+        <div className="row">
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+          <Cell />
+        </div>
+      </div>
     </div>
   );
 }
