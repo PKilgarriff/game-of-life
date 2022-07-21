@@ -1,13 +1,21 @@
 import "./App.css";
 import Grid from "./components/Grid";
 
-const cells = [
-  [1, 0, 1, 1, 0, 1, 0],
-  [0, 0, 1, 1, 0, 1, 0],
-  [0, 0, 1, 1, 0, 1, 0],
-  [1, 1, 0, 1, 0, 1, 0],
-  [1, 0, 1, 1, 0, 1, 0],
-];
+const oneOrZero = () => (Math.random() >= 0.5 ? 1 : 0);
+
+const generateCells = (rows, columns) => {
+  let matrix = [];
+  for (let i = 0; i < rows; i++) {
+    let row = [];
+    for (let j = 0; j < columns; j++) {
+      row.push(oneOrZero());
+    }
+    matrix.push(row);
+  }
+  return matrix;
+};
+
+const cells = generateCells(8, 7);
 
 function App() {
   return (
