@@ -6,16 +6,17 @@ const trueOrFalse = () => {
   return number < 5 ? true : false;
 };
 
-function Cell() {
-  const [live, setLive] = useState(trueOrFalse());
+function Cell({ live }) {
+  // const [live, setLive] = useState(trueOrFalse());
 
-  const toggleLive = () => {
-    setLive((prevData) => !prevData);
-  };
+  // const toggleLive = () => {
+  //   setLive((prevData) => !prevData);
+  // };
+
   return (
     <span
       className={`${live ? "live" : "dead"} cell`}
-      onClick={toggleLive}
+      // onClick={toggleLive}
     ></span>
   );
 }

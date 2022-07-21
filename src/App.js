@@ -1,5 +1,13 @@
 import "./App.css";
-import Cell from "./components/Cell";
+import Grid from "./components/Grid";
+
+const cells = [
+  [1, 0, 1, 1, 0, 1, 0],
+  [0, 0, 1, 1, 0, 1, 0],
+  [0, 0, 1, 1, 0, 1, 0],
+  [1, 1, 0, 1, 0, 1, 0],
+  [1, 0, 1, 1, 0, 1, 0],
+];
 
 function App() {
   return (
@@ -7,43 +15,7 @@ function App() {
       <header className="App-header">
         <h1>Game of Life</h1>
       </header>
-      <div className="grid">
-        <div className="row">
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-        </div>
-        <div className="row">
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-        </div>
-        <div className="row">
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-        </div>
-        <div className="row">
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-        </div>
-        <div className="row">
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-          <Cell />
-        </div>
-      </div>
+      <Grid rows={cells} />
     </div>
   );
 }
