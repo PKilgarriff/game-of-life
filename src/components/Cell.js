@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 const trueOrFalse = () => {
-  const number = Math.floor(Math.random() * 10);
-  console.log(`Number: ${number}`);
-  return number < 5 ? true : false;
+  const number = Math.round(Math.random());
+  return number === 1 ? true : false;
 };
 
 function Cell({ live }) {

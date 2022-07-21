@@ -1,7 +1,7 @@
 import "./App.css";
 import Grid from "./components/Grid";
 
-const oneOrZero = () => (Math.random() >= 0.5 ? 1 : 0);
+const oneOrZero = () => Math.round(Math.random());
 
 const generateCells = (rows, columns) => {
   let matrix = [];
@@ -15,7 +15,7 @@ const generateCells = (rows, columns) => {
   return matrix;
 };
 
-const cells = generateCells(8, 7);
+const cells = generateCells(15, 15);
 
 function App() {
   return (
